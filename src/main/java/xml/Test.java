@@ -1,9 +1,14 @@
 package xml;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import com.di.toolkit.XmlUtil;
+
+import xml.Person.Attributes;
+import xml.Person.Child;
+import xml.Person.Wife;
 
 /**
  * @author di
@@ -11,6 +16,27 @@ import com.di.toolkit.XmlUtil;
 public class Test {
 	@org.junit.Test
 	public void test() {
+		serialize();
+		deserialize();
+	}
+
+	public void serialize() {
+		Person p = new Person();
+		p.setName("Alice");
+		Attributes atts = new Person.Attributes();
+		atts.setNs("45878");
+		p.setAttributes(atts);
+		Wife w = new Person.Wife();
+		w.setName("Alice");
+		p.setWife(w);
+		List<Child> cs = new ArrayList<>();
+		Child c = new Child();
+		cs.add(c);
+		p.setChilds(cs);
+		System.out.println(XmlUtil.toXml(p));
+	}
+
+	public void deserialize() {
 		String xml = "<person ns=\"arj\"><name>sasd</name><wife nick=\"ali\"><name><![CDATA[<xml>alice</xml>]]></name></wife><cs><child><name>bob</name><age>16</age></child><child><name>anne</name><age>12</age></child></cs></person>";
 		Map<?, ?> map = XmlUtil.toObject(xml, Map.class);
 		Map<?, ?> w = (Map<?, ?>) map.get("wife");
@@ -26,5 +52,6 @@ public class Test {
 		// for (String s : list) {
 		// System.out.println(s);
 		// }
+
 	}
 }
