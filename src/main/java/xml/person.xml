@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person   xml:ns="orz" a="1">
+	<name>sasd</name>
+	<wife nick="ali">
+		<name><![CDATA[<xml>alice</xml>]]></name>
+	</wife>
+	<cs>
+		<child>
+			<name>bob</name>
+			<age>16</age>
+		</child>
+		<child>
+			<name>
+			<![CDATA[<xml>asasas</xml>]]>
+			</name>
+			<age>12</age>
+		</child>
+	</cs>
+</person>
