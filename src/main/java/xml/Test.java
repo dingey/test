@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.di.toolkit.ClassCreate;
 import com.di.toolkit.XmlUtil;
 
 import xml.Person.Attributes;
@@ -16,8 +17,14 @@ import xml.Person.Wife;
 public class Test {
 	@org.junit.Test
 	public void test() {
-		serialize();
-		deserialize();
+		 serialize();
+		 deserialize();
+//		testCreate();
+	}
+
+	public void testCreate() {
+		String xml = "<man><wife_a><cs><ch><id>1</id></ch><ch><id>2</id></ch></cs></wife_a></man>";
+		ClassCreate.createFromXml(xml, "", "man");
 	}
 
 	public void serialize() {

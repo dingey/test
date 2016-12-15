@@ -7,7 +7,7 @@ import com.di.toolkit.data.annotation.Alias;
 /**
  * @author di
  */
-@Alias(xml = "人", json = "person")
+@Alias(xml = "person", json = "person")
 public class Person {
 	private String name;
 	private Attributes attributes;
