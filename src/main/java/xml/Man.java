@@ -20,14 +20,15 @@ public class Man {
 
 	@Alias("wife_a")
 	public static class WifeA {
-		private java.util.List<Ch> cs;
+		@Alias("c_l")
+		private java.util.List<Ch> cL;
 
-		public java.util.List<Ch> getCs() {
-			return cs;
+		public java.util.List<Ch> getCL() {
+			return cL;
 		}
 
-		public void setCs(java.util.List<Ch> cs) {
-			this.cs = cs;
+		public void setCL(java.util.List<Ch> cL) {
+			this.cL = cL;
 		}
 
 		@Alias("ch")

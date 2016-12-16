@@ -5,8 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import com.di.toolkit.ClassCreate;
+import com.di.toolkit.JsonUtil;
 import com.di.toolkit.XmlUtil;
 
+import xml.Man.WifeA;
+import xml.Man.WifeA.Ch;
 import xml.Person.Attributes;
 import xml.Person.Child;
 import xml.Person.Wife;
@@ -17,14 +20,36 @@ import xml.Person.Wife;
 public class Test {
 	@org.junit.Test
 	public void test() {
-		 serialize();
-		 deserialize();
-//		testCreate();
+		// serialize();
+		// deserialize();
+		// createFromXml();
+		createFromJson();
 	}
 
-	public void testCreate() {
-		String xml = "<man><wife_a><cs><ch><id>1</id></ch><ch><id>2</id></ch></cs></wife_a></man>";
-		ClassCreate.createFromXml(xml, "", "man");
+	public void createFromXml() {
+		String xml = "<man><wife_a><c_l><ch><id>1</id></ch><ch><id>2</id></ch></c_l></wife_a></man>";
+		ClassCreate.createFromXml(xml, "com.xml", "man");
+	}
+
+	public void createFromJson() {
+		String json = "{\"wife_a\":{\"cL\":[{\"id\":\"1\"},{\"id\":\"2\"}]}}";
+		ClassCreate.createFromJson(json, "", "");
+	}
+
+	public void testMan() {
+		Man m = new Man();
+		WifeA w = new Man.WifeA();
+		List<Ch> chs = new ArrayList<>();
+		Ch ch = new Ch();
+		ch.setId("1");
+		chs.add(ch);
+		Ch ch1 = new Ch();
+		ch1.setId("2");
+		chs.add(ch1);
+		w.setCL(chs);
+		m.setWifeA(w);
+		System.out.println(JsonUtil.toJson(m));
+		System.out.println(XmlUtil.toXml(m));
 	}
 
 	public void serialize() {
