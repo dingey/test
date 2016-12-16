@@ -3,9 +3,7 @@ package pojo;
 import java.util.List;
 
 /**
- * @author dinglinbo
- * @date 2016Äê12ÔÂ9ÈÕ
- * @since 1.0.0
+ * @author di
  */
 public class Boat {
 	private int id;

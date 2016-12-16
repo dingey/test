@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * @author dinglinbo
- * @date 2016Äê12ÔÂ9ÈÕ
+ * @date 2016ï¿½ï¿½12ï¿½ï¿½9ï¿½ï¿½
  * @since 1.0.0
  */
 public class Man {
@@ -27,14 +27,6 @@ public class Man {
 
 	public void setCreate(Date create) {
 		this.create = create;
-	}
-
-	public boolean isDel() {
-		return del;
-	}
-
-	public void setDel(boolean del) {
-		this.del = del;
 	}
 
 	public String getName() {

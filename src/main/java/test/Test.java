@@ -23,13 +23,9 @@ import pojo.Man;
 public class Test {
 	@org.junit.Test
 	public void test() throws JsonParseException, JsonMappingException, IOException {
-		// jackson();
-		// fast();
-		my1();
-		// my();
-		String json = "{\"id\":1,\"man\":{\"name\":\"Bush\",\"age\":36,\"del\":true},\"childs\":[{\"name\":\"alice\"},{\"name\":\"bob\",\"age\":16}]}";
-		tes(json);
-		my1();
+		jackson();
+		fast();
+		my();
 	}
 
 	public void my1() {

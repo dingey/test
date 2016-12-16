@@ -20,10 +20,10 @@ import xml.Person.Wife;
 public class Test {
 	@org.junit.Test
 	public void test() {
-		// serialize();
+		 serialize();
 		// deserialize();
 		// createFromXml();
-		createFromJson();
+//		createFromJson();
 	}
 
 	public void createFromXml() {
