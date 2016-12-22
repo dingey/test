@@ -21,13 +21,13 @@ public class Test {
 	@org.junit.Test
 	public void test() {
 		 serialize();
-		// deserialize();
-		// createFromXml();
+		 deserialize();
+		 createFromXml();
 //		createFromJson();
 	}
 
 	public void createFromXml() {
-		String xml = "<man><wife_a><c_l><ch><id>1</id></ch><ch><id>2</id></ch></c_l></wife_a></man>";
+		String xml = "<man id=\"a\"><wife_a><c_l><ch><id>1</id></ch><ch><id>2</id></ch></c_l></wife_a></man>";
 		ClassCreate.createFromXml(xml, "com.xml", "man");
 	}
 
