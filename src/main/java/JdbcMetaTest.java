@@ -12,5 +12,6 @@ public class JdbcMetaTest {
 	@Test
 	public void test() throws SQLException{
 		Table table = JdbcMetaUtil.getTable("person_1");
+		System.out.println(table.getName());
 	}
 }
